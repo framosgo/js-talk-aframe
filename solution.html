@@ -5,11 +5,15 @@
     <meta name="description" content="Hallo World! • A-Frame" />
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="components/color-on-hover.js"></script>
+    <script src="components/spawn.js"></script>
+    <script src="entities/random-boxes.js"></script>
   </head>
-  <body physics>
-    <a-scene>
+  <body>
+    <a-scene physics background="color: #FAFAFA" environment="preset: forest">
+      <a-random-boxes color="blueviolet" number="60"></a-random-boxes>
       <a-assets>
-        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" />
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" />
       </a-assets>
       <a-box
@@ -17,6 +21,7 @@
         rotation="0 45 0"
         color="#4CC3D9"
         animation="property: position; to: -1 2 -3; dir: alternate; loop: true"
+        color-on-hover="color: white"
       ></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
         <a-ring position="1 2 0" color="white"></a-ring>
@@ -30,11 +35,11 @@
         dynamic-body
       ></a-cylinder>
       <a-plane
-        position="0 0 -4"
+        position="0 -0.01 -4"
         rotation="-90 0 0"
-        width="100"
-        height="100"
-        src="#groundTexture"
+        width="4"
+        height="4"
+        color="white"
         static-body
       ></a-plane>
       <a-sky src="#skyTexture"></a-sky>
@@ -44,6 +49,9 @@
         position="0 2.5 -2"
         align="center"
       ></a-text>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
     </a-scene>
   </body>
 </html>
