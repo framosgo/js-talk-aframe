@@ -2,7 +2,7 @@
 Introduction to Virtual Reality and getting started with A-Frame.
 
 ## Content
-This project has 5 branches to practice with A-Frame according the following exercices. Each branch has its file solution.html as an alternative solution.
+This project has 5 branches to practice with A-Frame according to the following exercices.
 
 ### Excercices
 1. Creating primitives and see relative properties in entities composition
@@ -18,4 +18,4 @@ This project has 5 branches to practice with A-Frame according the following exe
 - 4-animations
 - 5-ecs
 
-For more details, follow the instrucctions of `JSTalk-AFrame.pdf` in main branch.
+Each branch has its file `solution.html` to help you.
